@@ -8,12 +8,14 @@
     myFunc should return getSecretString
   */
   
-  //CODE HERE
+  function myFunc(){
+
+  }
 
   
   //Now create a variable called secretString. Its value should be the invocation of myFunc.
 
-  //CODE HERE
+ const secretString = myFunc();
   
   
   ////////////PROBLEM 2////////////
@@ -28,12 +30,14 @@
     The lightSwitch function should return flipTheSwitch.
   */
   
-  //CODE HERE
+  function lightSwitch(){
+
+  }
 
   
   //Create a variable called kitchenSwitch whose value is the invocation of lightSwitch.
   
-  //CODE HERE
+ const kitchenSwitch = lightSwitch();
 
   
   //Invoke kitchenSwitch.
