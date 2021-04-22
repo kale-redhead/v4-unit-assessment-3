@@ -14,7 +14,15 @@
   Be sure to match the capitalization and punctuation of the string.
 */
 
-//CODE HERE
+class Character{
+  constructor(name, type){
+    this.name = name;
+    this.type = type;
+  }
+  getInfo(){
+    return `This is a ${this.type} character named ${this.name}.`
+  }
+}
 
 //////////////////PROBLEM 2////////////////////
 
@@ -32,14 +40,22 @@
   Call your new class NPC
 */
 
-//CODE HERE
+class NPC extends Character{
+  constructor(location, phrase){
+    super();
+  }  
+
+  dialogue(){
+    return `${this.name}: ${this.phrase}`
+  }
+}
 
 /*
     Create an NPC named Ralph who is a human located in Niceland. His phrase should be `I'm gonna wreck it!`. 
     Store your new NPC in a variable called 'ralph'.
 */
 
-//CODE HERE
+let ralph = new NPC('Ralph', 'human', 'Niceland', `I'm gonna wreck it!`);
 
 /*
     Next you're going to create three variables to store information about Ralph.
@@ -48,7 +64,9 @@
     Third, make a variable named ralphsLocation whose value will be Ralph's location.
 */
 
-//CODE HERE
+let ralphsInfo = getInfo();
+let ralphsDialogue = dialogue();
+let ralphsLocation = this.location;
 
 //////////////////PROBLEM 3////////////////////
 
@@ -73,7 +91,17 @@
   Call your new class Player
 */
 
-//CODE HERE
+class Player extends Character{
+  constructor(healthLevel, attackLevel){
+    super();
+  }
+
+  defend(amount){
+    if(healthLevel - amount > 0){
+      
+    }
+  }
+}
 
 /*
     Next, we'll create two Players.
@@ -110,7 +138,9 @@
       - Example string: `Wonder Woman used flight!`
 */
 
-//CODE HERE
+class Hero extends Player{
+  
+}
 
 /*
   Create a hero named 'Fire Spitter' whose type is 'dragon'. 

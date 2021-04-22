@@ -9,7 +9,11 @@
   */
   
   function myFunc(){
-
+    let myStr = 'super secret string';
+    function getSecretString(){
+      return myStr;
+    }
+    return getSecretString;
   }
 
   
@@ -31,7 +35,16 @@
   */
   
   function lightSwitch(){
-
+    let isTheLightOn = false;
+    function flipTheSwitch(){
+      if(isTheLightOn === true){
+        return 'The light is on'
+      }
+      else{
+        return 'The light is off'
+      }
+    }
+    return flipTheSwitch();
   }
 
   
@@ -42,12 +55,11 @@
   
   //Invoke kitchenSwitch.
 
-  //CODE HERE
   
   
   //Create a variable called bathroomSwitch whose value is the invocation of lightSwitch. 
 
-  //CODE HERE
+  const bathroomSwitch = lightSwitch();
   
   
   //Invoke bathroomSwitch twice.
@@ -67,7 +79,22 @@
       - 'prunePlant' should subtract 1 from the height and return the new height
   */
 
-  //CODE HERE
+  function plantTracker(){
+    let plant = 'fern';
+    let height = 12;
+
+    return{
+      readInfo: function(){
+        return `This is a ${plant} plant that is ${height} inches tall.`
+      },
+      waterPlant: function(){
+        return height += 1;
+      },
+      prunePlant: function(){
+        return height -= 1;
+      }
+    }
+  }
 
 
   ////////////PROBLEM 4////////////
@@ -82,19 +109,33 @@
         - hint: try to find the index of the string first
   */
 
-  //CODE HERE
+  function inventory(){
+    let products = [];
+
+    return{
+      readProducts: function(){
+        return products;
+      },
+      addToProducts: function(string){
+        products.push(string);
+      },
+      deleteFromProducts: function(string){
+
+      }
+    }
+  }
 
 
   /*
     Create a variable called 'shoes' whose value is the invocation of inventory.
   */
 
-  //CODE HERE
+   const shoes = inventory();
 
 
   /*
     Add an item to your shoes array using the addToProducts function
   */
 
-  //CODE HERE
+  addToProducts('adidas');
 
