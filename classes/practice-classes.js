@@ -41,8 +41,10 @@ class Character{
 */
 
 class NPC extends Character{
-  constructor(location, phrase){
-    super();
+  constructor(name, type, location, phrase){
+    super(name, type);
+    this.location = location;
+    this.phrase = phrase;
   }  
 
   dialogue(){
@@ -64,9 +66,9 @@ let ralph = new NPC('Ralph', 'human', 'Niceland', `I'm gonna wreck it!`);
     Third, make a variable named ralphsLocation whose value will be Ralph's location.
 */
 
-let ralphsInfo = getInfo();
-let ralphsDialogue = dialogue();
-let ralphsLocation = this.location;
+// let ralphsInfo = getInfo();
+// let ralphsDialogue = dialogue();
+// let ralphsLocation = this.location;
 
 //////////////////PROBLEM 3////////////////////
 
@@ -92,14 +94,14 @@ let ralphsLocation = this.location;
 */
 
 class Player extends Character{
-  constructor(healthLevel, attackLevel){
-    super();
+  constructor(name, type, healthLevel, attackLevel){
+    super(name, type);
+    this.healthLevel = healthLevel;
+    this.attackLevel = attackLevel;
   }
 
   defend(amount){
-    if(healthLevel - amount > 0){
-      
-    }
+     
   }
 }
 
@@ -111,7 +113,8 @@ class Player extends Character{
     and he's a firebender type with a 100 healthLevel and 0 attackLevel.
 */
 
-//CODE HERE
+let aang = new Player('Aang', 'airbender', 100, 100);
+let ozai = new Player('Ozai', 'firebender', 100, 0);
 
 /*
     Let's see how a fight between these two would go. 
@@ -120,7 +123,7 @@ class Player extends Character{
     (You can console log battle to see what happens)
 */
 
-//CODE HERE
+let battle = defend(ozai);
 
 //////////////////PROBLEM 4////////////////////
 
@@ -139,7 +142,17 @@ class Player extends Character{
 */
 
 class Hero extends Player{
-  
+  constructor(name, type, healthLevel, attackLevel, superPowers){
+    super(name, type, healthLevel, attackLevel);
+    this.superPowers = superPowers;
+  }
+
+  addSuperPower(power){
+    
+  }
+
+  // useSuperPower(index){
+  // }
 }
 
 /*
@@ -151,4 +164,6 @@ class Hero extends Player{
   Last, invoke useSuperPower passing in 0 for the index and store the result in a variable called fireSpitterAttack.
 */
 
-//CODE HERE
+let fireSpitter = new Hero('Fire Spitter', 'dragon', 5000, 5000, null);
+// addSuperPower('spitting fire', 'invisibilty', 'fire manipulation');
+// let fireSpitterAttack = useSuperPower(0);
