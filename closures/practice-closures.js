@@ -120,7 +120,7 @@
         products.push(string);
       },
       deleteFromProducts: function(string){
-        
+
       }
     }
   }
